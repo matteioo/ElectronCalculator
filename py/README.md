@@ -1,9 +1,17 @@
-# calc.py
+# [calc.py](calc.py)
 ## Description
-This script contains functions to interpret algebraic expressions. It can also
-store and use variables.
+This script contains functions to interpret algebraic expressions. It can also store and use variables. It actuallay evaluates Python statements. So all Python operators are available, though you should stick to aritchmetic operators. When writing inputs for this script, be generous with spaces and parantheses.
+
 These expressions are usable:
-  - (gonna do it soon, i promise)
+  - [Python operators](https://www.tutorialspoint.com/python/python_basic_operators.htm)
+  (Be aware that you should stick to arithmetic operators, but you dont _have_ to)
+  - ²,³,⁴: added for convienience
+  - root: square root
+  - ln: natural log
+  - log: log base 10
+  - sin, con, tan: trigonometric functions
+  - asin, acos, atan: reverse trig functions
+  - pi, e: constants
 
 Example Expressions :
 ```
@@ -15,15 +23,32 @@ var:a = 5*7²
 ## Changelog
 ### v0.1
   - wrote script, with minimal testing
+  - base features: basic variables, basic operations
 ### v0.2
   - cleaned up code
   - added comments
 ### v0.3
-  - fixed bug: leading function (e.g. log) cause errors
+  - fixed Bug #1: leading function (e.g. log) cause errors
+### v0.4
+  - added ans functionality
+  - added excception handling
+  - fixed Bug #2: variables are broken
+  - fixed Bug #3: multiple vars in one input do not work
+## Bugs
+  - Bug #1: leading function (e.g. log) cause errors.
+    - Cause: Ambiguity handling demands a leading space for functions (e.g. log).
+    - Fix: Add leading spaces to every input
+  - Bug #2: variables are broken.
+    - Cause: Leading space from bugfix#1 caused exec() to fail due to incorrect indenation.
+    - Fix: remove leading space before exec()
+  - Bug #3: multiple vars in one input do not work
+    - Cause: The opening brace for the vars dictionary is created by str.replace(), while the closing brace is placed using str.find(). After the first replace, find() cannot find its reference point
+    - Fix: set max replaces per cycle to 1
 
-# test_calc.py
+
+# [test_calc.py](test_calc.py)
 ##Description
-This is a test script for calc.py. It repeadetly calls interpret() from calc.py, in an endless loop. Variables and a few expressions were successfully tested.
+This is a test script for [calc.py](calc.py). It repeadetly calls interpret() from [calc.py](calc.py), in an endless loop. Variables and a few expressions were successfully tested.
 
 Example:
 ```
@@ -34,16 +59,16 @@ Example:
 ### v0.1
   - wrote script
 
-# api.py
+# [api.py](api.py)
 ## Description
-This script uses zerorpc in conjunction with calc.py. In the future, this will be used to communicate with the node.js app.
+This script uses [zerorpc](http://www.zerorpc.io/) in conjunction with [calc.py](calc.py). In the future, this will be used to communicate with ~~insert app name here~~ the node.js app.
 ## Changelog
 ### v0.1
 - worte script
 
-# python_client.py
+# [python_client.py](python_client.py)
 ## Description
-This script tests api.py by sending an input string to api.py and recieveing the processed input back. All working as expected.
+This script tests [api.py](api.py) by sending an input string to [api.py](api.py) and recieveing the processed input back. All working as expected.
 ## Changelog
 ### v0.1
 - wrote script

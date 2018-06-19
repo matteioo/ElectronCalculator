@@ -1,0 +1,12 @@
+//compileExpanded: ../css/$1.css, compileCompressed: ../css/$1.min.css
+
+// IMPORT ALL SCSS DIRECTORY FILES
+
+/* PLUGIN STYLE */
+@import '0-plugins/plugins-dir';
+/* BASE STYLE */
+@import '1-base/base-dir';
+/* LAYOUT STYLE */
+@import '2-layouts/layouts-dir';
+/* MODULES STYLE */
+@import '3-modules/modules-dir';

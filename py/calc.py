@@ -3,6 +3,8 @@ import math
 vars = {}   # all variables are stored here
 
 def interpret(input_string):
+     # because of my way to deal with ambiguity, a space must be added to the start of the string
+    input_string = " " + input_string
     """interprets a string as algebraic expression, specifics in README.md"""
     help = 'ya wish'    # gotta actually write this...
     if(input_string == 'help'):

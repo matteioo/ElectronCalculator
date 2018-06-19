@@ -3,7 +3,7 @@
 This script contains functions to interpret algebraic expressions. It can also store and use variables. It actuallay evaluates Python statements. So all Python operators are available, though you should stick to aritchmetic operators. When writing inputs for this script, be generous with spaces and parantheses.
 
 These expressions are usable:
-  - [Python operators](https://www.tutorialspoint.com/python/python_basic_operators.htm)
+  - [Python operators](https://www.tutorialspoint.com/python/python_basic_operators.htm){:target="_blank"}
   (Be aware that you should stick to arithmetic operators, but you dont _have_ to)
   - ²,³,⁴: added for convienience
   - root: square root

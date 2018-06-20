@@ -7,4 +7,4 @@ In this directory you will find the final electron files, which will land in the
 
 ## Changelog
 ### v0.1
-  - added [new Font](/vendor/README.md#v01)
+  - added [new Font](vendor/README.md#v01)

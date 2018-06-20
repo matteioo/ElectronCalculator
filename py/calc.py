@@ -92,13 +92,16 @@ def var_handling(input_string):
     return input_string
 
 def delete_var(key):
+    """deletes one variable"""
     del vars[key]
     return
 
 def list_var():
+    """lists all variables""""
     return str(vars)
 
 def wipe_var():
+    """deletes all varables"""
     global vars
     vars = {}
     return

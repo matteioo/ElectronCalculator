@@ -5,6 +5,7 @@ This script contains functions to interpret algebraic expressions. It can also s
 These expressions are usable:
   - [Python operators](https://www.tutorialspoint.com/python/python_basic_operators.htm)
   (Be aware that you should stick to arithmetic operators, but you dont _have_ to)
+  - ^: exponentiation
   - ²,³,⁴: added for convienience
   - root: square root
   - ln: natural log
@@ -17,7 +18,7 @@ Example Expressions :
 ```
 (4 * 3³ - sin(7 * pi) + root(7)) - 2^4
 var:a = 5*7²
-100 * pi + 6 / var.a
+100 * pi + 6 / var:a
 ```
 
 ## Changelog
@@ -31,9 +32,16 @@ var:a = 5*7²
   - fixed Bug #1: leading function (e.g. log) cause errors
 ### v0.4
   - added ans functionality
-  - added excception handling
+  - added exception handling
+    - Detect invalid variable names
+    - Detect NaN inputs
+    - Detect division by 0
   - fixed Bug #2: variables are broken
   - fixed Bug #3: multiple vars in one input do not work
+### v0.4.1
+  - added more exceptions with feedback
+    - Detect Syntax Errors
+    - Handle empty inputs
 ## Bugs
   - Bug #1: leading function (e.g. log) cause errors.
     - Cause: Ambiguity handling demands a leading space for functions (e.g. log).

@@ -5,13 +5,15 @@ vars = {}   # all variables are stored here
 ans = 1
 
 def interpret(input_string):
+    """interprets a string as algebraic expression, specifics in README.md"""
     global ans
      # because of my way to deal with ambiguity, a space must be added to the start of the string
     input_string = " " + input_string
-    """interprets a string as algebraic expression, specifics in README.md"""
     help = 'ya wish'    # gotta actually write this...
     if(input_string == 'help'):
         return help
+    elif input_string == ' ':
+        return ''
     else:
         if 'var:' in input_string:
             try:
@@ -19,9 +21,16 @@ def interpret(input_string):
             except AssertionError:
                 return 'Varname too long, max is 1 char'
             except:
-                return ('Generic Error' + str(sys.exc_info()[0]))
+                return ('[22] Generic Error' + str(sys.exc_info()[0]))
         if '=' in input_string:
-            exec(cleanup(input_string)[1:])     # exec is used to store variables, the space from line 9 hast to be removed again
+            try:
+                exec(cleanup(input_string)[1:])     # exec is used to store variables, the space from line 9 hast to be removed again
+            except KeyError:
+                return 'Unknown variable name'
+            except SyntaxError:
+                return 'Nonsencial Expression - only one variable can be on the left side of \'=\''
+            except:
+                return ('[0] Generic Error' + str(sys.exc_info()[0]))
             try:
                 ans = eval(input_string[:input_string.find('=')])
             except ZeroDivisionError:
@@ -29,7 +38,7 @@ def interpret(input_string):
             except NameError:
                 return 'NaN somewhere?'
             except:
-                return ('Generic Error' + str(sys.exc_info()[0]))
+                return ('[1] Generic Error' + str(sys.exc_info()[0]))
             return str(ans)
         else:
             try:
@@ -38,8 +47,10 @@ def interpret(input_string):
                 return 'Division by Zero'
             except NameError:
                 return 'NaN somewhere?'
+            except SyntaxError:
+                return 'Nonsencial expression - maybe parantheses mismatch or unrecognised symbol?'
             except:
-                return ('Generic Error' + str(sys.exc_info()[0]))
+                return ('[2] Generic Error' + str(sys.exc_info()[0]))
             return str(ans)
 
 

@@ -2,7 +2,7 @@ import math
 import sys
 
 vars = {}   # all variables are stored here
-ans = 1
+ans = 0
 
 def interpret(input_string):
     """interprets a string as algebraic expression, specifics in README.md"""
@@ -13,6 +13,14 @@ def interpret(input_string):
     if(input_string == 'help'):
         return help
     elif input_string == ' ':
+        return ''
+    elif input_string[1:7] == 'delete': #if a 'delete' occurs, it must be leading, and dont forget the added ' '
+        delete_var(input_string[12])
+        return ''
+    elif input_string[1:8] == 'varlist':
+        return list_var()
+    elif input_string[1:8] == 'varwipe':
+        wipe_var()
         return ''
     else:
         if 'var:' in input_string:
@@ -28,7 +36,7 @@ def interpret(input_string):
             except KeyError:
                 return 'Unknown variable name'
             except SyntaxError:
-                return 'Nonsencial Expression - only one variable can be on the left side of \'=\''
+                return 'Unrecognised Expression - more than one variable on the left side of \'=\'?'
             except:
                 return ('[0] Generic Error' + str(sys.exc_info()[0]))
             try:
@@ -36,7 +44,7 @@ def interpret(input_string):
             except ZeroDivisionError:
                 return 'Division by Zero'
             except NameError:
-                return 'NaN somewhere?'
+                return 'Unrecognised expression - NaN somewhere?'
             except:
                 return ('[1] Generic Error' + str(sys.exc_info()[0]))
             return str(ans)
@@ -48,7 +56,9 @@ def interpret(input_string):
             except NameError:
                 return 'NaN somewhere?'
             except SyntaxError:
-                return 'Nonsencial expression - maybe parantheses mismatch or unrecognised symbol?'
+                return 'Unrecognised expression - maybe parantheses mismatch or unrecognised symbol?'
+            except KeyError:
+                return 'Unknown variable name'
             except:
                 return ('[2] Generic Error' + str(sys.exc_info()[0]))
             return str(ans)
@@ -80,3 +90,18 @@ def var_handling(input_string):
         input_string = input_string[:var_index+4] + '\']' + input_string[var_index+4:]
     #if input_string[-3] == '[': input_string = input_string + '\']' # easyfix for wierd bug
     return input_string
+
+def delete_var(key):
+    """deletes one variable"""
+    del vars[key]
+    return
+
+def list_var():
+    """lists all variables""""
+    return str(vars)
+
+def wipe_var():
+    """deletes all varables"""
+    global vars
+    vars = {}
+    return

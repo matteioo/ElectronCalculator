@@ -42,6 +42,8 @@ var:a = 5*7²
   - added more exceptions with feedback
     - Detect Syntax Errors
     - Handle empty inputs
+### v0.5
+  - added 'listing' and 'delete' functionality to var system
 ## Bugs
   - Bug #1: leading function (e.g. log) cause errors.
     - Cause: Ambiguity handling demands a leading space for functions (e.g. log).

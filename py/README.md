@@ -53,6 +53,7 @@ var:a = 5*7²
 
 ### v0.6
   - removed zerorpc
+  
 ## Bugs
   - Bug #1: leading function (e.g. log) cause errors.
     - Cause: Ambiguity handling demands a leading space for functions (e.g. log).

@@ -12,4 +12,4 @@ Remember that loading the css files of FontAwesome has to be before loading the 
 ### v0.1
   - added [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) into the fonts folder
 ### v0.2
-  - added [FontAwesome(5.1.0)](https://fontawesome.com/) css and js version into the folder `FontAwesome-5.0.13` (added all icons in FontAwesome Free) - *Attention:* css version of FontAwesome is currently unused but can be [activated](vendor/README.md#FontAwesome)
+  - added [FontAwesome(5.1.0)](https://fontawesome.com/) css and js version into the folder `FontAwesome-5.0.13` (added all icons in FontAwesome Free) - *Attention:* css version of FontAwesome is currently unused but can be [activated](vendor/README.md#fontawesome)

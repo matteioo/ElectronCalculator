@@ -4,10 +4,10 @@ block_cipher = None
 
 
 a = Analysis(['cli_calc.py'],
-             pathex=['/home/val/Documents/git/ElectronCalculator/py'],
+             pathex=['/home/val/Documents/git/ElectronCalculator/py/build/cli_calc'],
              binaries=[],
              datas=[],
-             hiddenimports=['_frozen_input_lib_external', '_winreg', '_scproxy', 'java', 'vms_lib', 'winreg', 'org.python', 'nt', 'msvcrt', '_winapi', '_dummy_threading', 'org'],
+             hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],

@@ -53,7 +53,7 @@ var:a = 5*7²
 
 ### v0.6
   - removed zerorpc
-  
+
 ## Bugs
   - Bug #1: leading function (e.g. log) cause errors.
     - Cause: Ambiguity handling demands a leading space for functions (e.g. log).
@@ -95,7 +95,7 @@ This script tests [api.py](api.py) by sending an input string to [api.py](api.py
 
 # [cli_calc.py](cli_calc.py)
 ## Description
-This scripts calls interpret() from [calc.py](calc.py) on its argument
+This scripts calls interpret() from [calc.py](calc.py) on its argument. This was turned into an standalone executable using pyinstaller.
 ## Changelog
 ### v0.1
 - wrote script

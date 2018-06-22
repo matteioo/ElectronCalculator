@@ -1,6 +1,6 @@
 # [calc.py](calc.py)
 ## Description
-This script contains functions to interpret algebraic expressions. It can also store and use variables. It actually evaluates Python statements. So all Python operators are available, though you should stick to arithmetic operators. When writing inputs for this script, be generous with spaces and parentheses.
+This script contains functions to interpret algebraic expressions. It can also store and use variables. It actually evaluates Python statements, and translates statements python cannot interpret. So all Python operators are available, though you should stick to arithmetic operators. When writing inputs for this script, be generous with spaces and parentheses.
 
 These expressions are usable:
   - [Python operators](https://www.tutorialspoint.com/python/python_basic_operators.htm)

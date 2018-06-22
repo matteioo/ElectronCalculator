@@ -1,18 +1,19 @@
 # [calc.py](calc.py)
 ## Description
-This script contains functions to interpret algebraic expressions. It can also store and use variables. It actuallay evaluates Python statements. So all Python operators are available, though you should stick to aritchmetic operators. When writing inputs for this script, be generous with spaces and parantheses.
+This script contains functions to interpret algebraic expressions. It can also store and use variables. It actually evaluates Python statements. So all Python operators are available, though you should stick to arithmetic operators. When writing inputs for this script, be generous with spaces and parentheses.
 
 These expressions are usable:
   - [Python operators](https://www.tutorialspoint.com/python/python_basic_operators.htm)
-  (Be aware that you should stick to arithmetic operators, but you dont _have_ to)
+  (Be aware that you should stick to arithmetic operators, but you don't _have_ to)
   - ^: exponentiation
-  - ²,³,⁴: added for convienience
+  - ²,³,⁴: added for convenience
   - root: square root
   - ln: natural log
   - log: log base 10
   - sin, con, tan: trigonometric functions
   - asin, acos, atan: reverse trig functions
   - pi, e: constants
+  - var:x : Store values in variables, they can be used at any time. Names are limited to 1 character
 
 Example Expressions :
 ```
@@ -25,11 +26,14 @@ var:a = 5*7²
 ### v0.1
   - wrote script, with minimal testing
   - base features: basic variables, basic operations
+
 ### v0.2
   - cleaned up code
   - added comments
+
 ### v0.3
   - fixed Bug #1: leading function (e.g. log) cause errors
+
 ### v0.4
   - added ans functionality
   - added exception handling
@@ -38,18 +42,23 @@ var:a = 5*7²
     - Detect division by 0
   - fixed Bug #2: variables are broken
   - fixed Bug #3: multiple vars in one input do not work
+
 ### v0.4.1
   - added more exceptions with feedback
     - Detect Syntax Errors
     - Handle empty inputs
+
 ### v0.5
   - added 'listing' and 'delete' functionality to var system
+
+### v0.6
+  - removed zerorpc
 ## Bugs
   - Bug #1: leading function (e.g. log) cause errors.
     - Cause: Ambiguity handling demands a leading space for functions (e.g. log).
     - Fix: Add leading spaces to every input
   - Bug #2: variables are broken.
-    - Cause: Leading space from bugfix#1 caused exec() to fail due to incorrect indenation.
+    - Cause: Leading space from bug-fix #1 caused exec() to fail due to incorrect indentation.
     - Fix: remove leading space before exec()
   - Bug #3: multiple vars in one input do not work
     - Cause: The opening brace for the vars dictionary is created by str.replace(), while the closing brace is placed using str.find(). After the first replace, find() cannot find its reference point
@@ -71,14 +80,14 @@ Example:
 
 # [api.py](api.py)
 ## Description
-This script uses [zerorpc](http://www.zerorpc.io/) in conjunction with [calc.py](calc.py). In the future, this will be used to communicate with ~~insert app name here~~ the node.js app.
+This script uses [zerorpc](http://www.zerorpc.io/) in conjunction with [calc.py](calc.py). In the future, this will be used to communicate with ~~insert app name here~~ the node.js app.  **This has been removed**
 ## Changelog
 ### v0.1
 - worte script
 
 # [python_client.py](python_client.py)
 ## Description
-This script tests [api.py](api.py) by sending an input string to [api.py](api.py) and recieveing the processed input back. All working as expected.
+This script tests [api.py](api.py) by sending an input string to [api.py](api.py) and recieveing the processed input back. All working as expected. **This has been removed**
 ## Changelog
 ### v0.1
 - wrote script

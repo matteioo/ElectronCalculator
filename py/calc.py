@@ -97,7 +97,7 @@ def delete_var(key):
     return
 
 def list_var():
-    """lists all variables""""
+    """lists all variables"""
     return str(vars)
 
 def wipe_var():

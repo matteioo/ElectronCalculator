@@ -91,3 +91,10 @@ This script tests [api.py](api.py) by sending an input string to [api.py](api.py
 ## Changelog
 ### v0.1
 - wrote script
+
+# [cli_calc.py](cli_calc.py)
+## Description
+This scripts calls interpret() from [calc.py](calc.py) on its argument
+## Changelog
+### v0.1
+- wrote script

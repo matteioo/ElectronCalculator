@@ -99,3 +99,5 @@ This scripts calls interpret() from [calc.py](calc.py) on its argument. This was
 ## Changelog
 ### v0.1
 - wrote script
+### vo.2
+- copied all function definitions of [calc.py](calc.py) into this file in order to fix compilation - did not work

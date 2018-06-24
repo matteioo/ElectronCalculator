@@ -1,0 +1,14 @@
+
+//Table
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: $darkgrey;
+}
+
+td {
+  padding: 9px;
+}

@@ -1,0 +1,11 @@
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  font-family: $font-stack-monospace;
+  margin-left: 13px;
+  width: 98.5%;
+}
+
+input[type="submit"] {
+  display: none;
+}

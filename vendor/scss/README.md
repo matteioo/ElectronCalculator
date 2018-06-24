@@ -11,3 +11,8 @@ The scss files are going to be processed in the the directory `../../electron/cs
 ## Changelog
 ### v0.1
   - added [normalize](https://github.com/JohnAlbin/normalize-scss/tree/master/sass) into `0-plugins` and imported into the styling
+
+### v0.2
+  - added \_colors, \_forms, \_tables partials into `3-modules/`
+  - changed \_layout, \_base
+  - style changes [here](/electron/README.md#v03)

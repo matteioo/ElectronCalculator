@@ -10,3 +10,6 @@ In this folder you will find files which are not directly needed for running **E
 ## Changelog
 ### v0.1
   - added `.xd` file and `scss` folder structure
+
+### v0.2
+  - bigger design [changes](/electron/README.md#v03)

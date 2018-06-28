@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <script>
+    function validateForm() {
+        var x = document.getElementById("math_form").elements["fname"].value;
+        document.getElementById("math_form").elements["fname"].value = "";
+        x += "<br>"
+        document.getElementById("output").innerHTML += x;
+        return false;
+    }
+  </script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +21,14 @@
   <script defer src="vendor/FontAwesome-5.1.0/js/all.js"></script>
 </head>
 <body>
-  <main id="output"></main>
+  <main id="output">
+  </main>
   <sidebar id="variables"></sidebar>
-  <section id="input"></section>
+  <section id="input">
+    <form name="myForm" onsubmit="return validateForm()" method="post" id="math_form">
+    ><input type="text" name="fname">
+    <input type="submit" style="display:none">
+    </form>
+  </section>
 </body>
 </html>

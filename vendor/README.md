@@ -13,3 +13,6 @@ In this folder you will find files which are not directly needed for running **E
 
 ### v0.2
   - bigger design [changes](/electron/README.md#v03)
+
+### v0.3
+  - Version 1.0 of the styling released

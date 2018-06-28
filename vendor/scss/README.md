@@ -16,3 +16,7 @@ The scss files are going to be processed in the the directory `../../electron/cs
   - added \_colors, \_forms, \_tables partials into `3-modules/`
   - changed \_layout, \_base
   - style changes [here](/electron/README.md#v03)
+
+### v1.0
+Version 1.0 released - the style does now look and work like in the UI Design ([*Adobe XD file*](/vendor/AdobeXD)).
+  - changed the width to not use `calc();` in the css but setting the total width of the grid to `100vh`

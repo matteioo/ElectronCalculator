@@ -24,3 +24,4 @@ In this directory you will find the final electron files, which will land in the
   - styling lines in the output container (e.x. `error` or `special` outputs)
 ### v0.4
   - added eclectron files
+  - updated `index.html`

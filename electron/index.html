@@ -23,11 +23,13 @@
 <body>
   <main id="output">
   </main>
-  <sidebar id="variables"></sidebar>
+  <sidebar id="variables">
+  </sidebar>
   <section id="input">
-    <form name="myForm" onsubmit="return validateForm()" method="post" id="math_form">
-    ><input type="text" name="fname">
-    <input type="submit" style="display:none">
+    <form class="input-form" name="myForm" onsubmit="return validateForm()" method="post" id="math_form">
+      <i class="fas fa-angle-right" style="position: absolute; padding-top: 2px;"></i>
+      <input type="text" name="fname" placeholder="Enter expression...">
+      <input type="submit" value="Enter">
     </form>
   </section>
 </body>

@@ -22,3 +22,5 @@ In this directory you will find the final electron files, which will land in the
   - changed margins of the input form
   - changed fonts and styling of the `<input>` in the input container -> no borders, placeholder font, transparency, margin (to display the icon correct on the left), width of the `<input>`
   - styling lines in the output container (e.x. `error` or `special` outputs)
+### v0.4
+  - added eclectron files
